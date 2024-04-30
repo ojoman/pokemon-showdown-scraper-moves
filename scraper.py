@@ -79,6 +79,10 @@ for name in allMons:
     type2 = 'none'
 
   #some mons (just missingno tbh) have no abilities
+  
+  ability1 = 'none'
+  ability2 = 'none'
+  ability3 = 'none'
   try:
     abilities = browser.find_elements_by_css_selector("dd.imgentry > a")
     ability1 = abilities[0].text

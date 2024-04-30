@@ -82,15 +82,12 @@ for name in allMons:
   try:
     abilities = browser.find_elements_by_css_selector("dd.imgentry > a")
     ability1 = abilities[0].text
-    if len(abilities) >= 2:
-      ability2 = abilities[1].text
-    else:
+    if len(abilities) == 2:
       ability2 = 'none'
-
-    if len(abilities) == 3:
+      ability3 = abilities[1].text
+    elif len(abilities) == 3:
+      ability2 = abilities[1].text
       ability3 = abilities[2].text
-    else:
-      ability3 = 'none'
   except:
     ability1 = 'none'
     ability2 = 'none'
